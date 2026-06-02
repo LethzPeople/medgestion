@@ -6,7 +6,7 @@ Sistema web para la gestión de turnos y pacientes de un consultorio odontológi
 
 ## Demo en video
 
-[![Ver demo](https://img.shields.io/badge/▶_Ver_Demo-red?style=for-the-badge)](https://youtu.be/-yj8NJVdBjs)
+[![Ver Demo en YouTube](https://img.shields.io/badge/Ver_Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/-yj8NJVdBjs)
 
 ---
 
