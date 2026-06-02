@@ -1,0 +1,61 @@
+[
+  {
+    "id": "col_users",
+    "name": "users",
+    "type": "auth",
+    "schema": [
+      { "id": "fld_email", "name": "email", "type": "email", "required": true, "presentable": true, "system": true },
+      { "id": "fld_password", "name": "password", "type": "password", "required": true, "system": true },
+      { "id": "fld_emailVisibility", "name": "emailVisibility", "type": "bool", "default": true, "system": true },
+      { "id": "fld_verified", "name": "verified", "type": "bool", "default": false, "system": true },
+      { "id": "fld_nombre", "name": "nombre", "type": "text", "required": true },
+      { "id": "fld_apellido", "name": "apellido", "type": "text", "required": true },
+      { "id": "select_rol_users", "name": "rol", "type": "select", "options": { "values": ["odontologo", "secretaria"] } }
+    ],
+    "listRule": "@request.auth.id != \"\"",
+    "viewRule": "@request.auth.id != \"\"",
+    "createRule": null,
+    "updateRule": "@request.auth.id = id",
+    "deleteRule": "@request.auth.collectionName = 'users'"
+  },
+  {
+    "id": "col_pacientes",
+    "name": "pacientes",
+    "type": "base",
+    "schema": [
+      { "id": "fld_nombre", "name": "nombre", "type": "text", "required": true },
+      { "id": "fld_apellido", "name": "apellido", "type": "text", "required": true },
+      { "id": "fld_email", "name": "email", "type": "email" },
+      { "id": "fld_telefono", "name": "telefono", "type": "text" },
+      { "id": "fld_dni", "name": "dni", "type": "text" },
+      { "id": "fld_fechaNacimiento", "name": "fechaNacimiento", "type": "date" },
+      { "id": "fld_obraSocial", "name": "obraSocial", "type": "text" },
+      { "id": "fld_nroAfiliado", "name": "nroAfiliado", "type": "text" },
+      { "id": "fld_notas", "name": "notas", "type": "editor" }
+    ],
+    "listRule": "@request.auth.id != \"\"",
+    "viewRule": "@request.auth.id != \"\"",
+    "createRule": "@request.auth.id != \"\"",
+    "updateRule": "@request.auth.id != \"\"",
+    "deleteRule": "@request.auth.collectionName = 'users'"
+  },
+  {
+    "id": "col_turnos",
+    "name": "turnos",
+    "type": "base",
+    "schema": [
+      { "id": "fld_paciente", "name": "paciente", "type": "relation", "required": true, "options": { "collectionId": "col_pacientes", "cascadeDelete": false, "maxSelect": 1 } },
+      { "id": "fld_fecha", "name": "fecha", "type": "date", "required": true },
+      { "id": "fld_hora", "name": "hora", "type": "text" },
+      { "id": "fld_duracion", "name": "duracion", "type": "number" },
+      { "id": "fld_motivo", "name": "motivo", "type": "text" },
+      { "id": "fld_estado", "name": "estado", "type": "select", "required": true, "options": { "values": ["pendiente", "confirmado", "cancelado", "completado"] } },
+      { "id": "fld_notas", "name": "notas", "type": "editor" }
+    ],
+    "listRule": "@request.auth.id != \"\"",
+    "viewRule": "@request.auth.id != \"\"",
+    "createRule": "@request.auth.id != \"\"",
+    "updateRule": "@request.auth.id != \"\"",
+    "deleteRule": "@request.auth.collectionName = 'users'"
+  }
+]

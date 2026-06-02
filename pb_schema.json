@@ -1,0 +1,43 @@
+[
+  {
+    "id": "col_pacientes",
+    "name": "pacientes",
+    "type": "auth",
+    "schema": [
+      { "name": "nombre",          "type": "text",  "required": true },
+      { "name": "apellido",        "type": "text",  "required": true },
+      { "name": "dni",             "type": "text",  "required": false },
+      { "name": "telefono",        "type": "text",  "required": false },
+      { "name": "fechaNacimiento", "type": "date",  "required": false },
+      { "name": "obraSocial",      "type": "text",  "required": false },
+      { "name": "nroAfiliado",     "type": "text",  "required": false },
+      { "name": "notas",           "type": "editor","required": false }
+    ],
+    "listRule":   "@request.auth.id != ''",
+    "viewRule":   "@request.auth.id != ''",
+    "createRule": "@request.auth.id != ''",
+    "updateRule": "@request.auth.id = id || @request.auth.collectionName = 'users'",
+    "deleteRule": "@request.auth.collectionName = 'users'"
+  },
+  {
+    "id": "col_turnos",
+    "name": "turnos",
+    "type": "base",
+    "schema": [
+      { "name": "paciente",  "type": "relation", "required": true,
+        "options": { "collectionId": "col_pacientes", "cascadeDelete": false, "maxSelect": 1, "displayFields": [] } },
+      { "name": "fecha",    "type": "date",   "required": true },
+      { "name": "hora",     "type": "text",   "required": false },
+      { "name": "duracion", "type": "number", "required": false },
+      { "name": "motivo",   "type": "text",   "required": false },
+      { "name": "estado",   "type": "select", "required": true,
+        "options": { "values": ["pendiente","confirmado","cancelado","completado"] } },
+      { "name": "notas",    "type": "editor", "required": false }
+    ],
+    "listRule":   "@request.auth.id != ''",
+    "viewRule":   "@request.auth.id != ''",
+    "createRule": "@request.auth.id != ''",
+    "updateRule": "@request.auth.id != ''",
+    "deleteRule": "@request.auth.collectionName = 'users'"
+  }
+]
