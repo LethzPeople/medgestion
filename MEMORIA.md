@@ -76,9 +76,6 @@ El criterio propio del desarrollador estuvo presente en cada etapa: decidir qué
 
 ![Resumen 2](docs/resumen-2.png)
 
-**Resumen del proceso de desarrollo (parte 3):**
-
-![Resumen 3](docs/resumen-3.png)
 
 ---
 
