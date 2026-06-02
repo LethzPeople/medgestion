@@ -68,6 +68,18 @@ El criterio propio del desarrollador estuvo presente en cada etapa: decidir qué
 
 ![Ideación con ChatGPT](docs/ia-chatgpt.png)
 
+**Resumen del proceso de desarrollo (parte 1):**
+
+![Resumen 1](docs/resumen-1.png)
+
+**Resumen del proceso de desarrollo (parte 2):**
+
+![Resumen 2](docs/resumen-2.png)
+
+**Resumen del proceso de desarrollo (parte 3):**
+
+![Resumen 3](docs/resumen-3.png)
+
 ---
 
 ## 5. Mejoras futuras
