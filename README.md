@@ -105,6 +105,20 @@ La aplicación queda disponible en `http://localhost:5173`.
 
 ## Estructura del proyecto
 
+## Capturas de pantalla
+
+| Panel Principal | Gestión de Pacientes |
+|---|---|
+| ![Dashboard](docs/screenshot-dashboard.png) | ![Pacientes](docs/screenshot-pacientes.png) |
+
+![Calendario](docs/screenshot-calendario.png)
+
+---
+
+---
+
+## Estructura del proyecto
+
 ```
 turnomedico/
 ├── src/
