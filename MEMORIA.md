@@ -58,6 +58,16 @@ El desarrollo siguió un proceso iterativo con tres herramientas de IA en distin
 
 El criterio propio del desarrollador estuvo presente en cada etapa: decidir qué construir, validar si el código generado era correcto, detectar cuándo una solución era innecesariamente compleja y orientar el desarrollo hacia las necesidades reales del consultorio. La IA fue una herramienta de aceleración, no de reemplazo del juicio técnico.
 
+### Evidencia del proceso
+
+**Diseño inicial generado con Stitch (Google):**
+
+![Diseño con Stitch](docs/ia-stitch.png)
+
+**Definición del proyecto con ChatGPT:**
+
+![Ideación con ChatGPT](docs/ia-chatgpt.png)
+
 ---
 
 ## 5. Mejoras futuras
